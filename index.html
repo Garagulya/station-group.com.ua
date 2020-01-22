@@ -16,9 +16,10 @@
                 position: relative;
             }
 
-            img {
+            .main-image {
                 height: 100vh;
                 max-width: 100vw;
+                object-fit: cover;
             }
 
             .links {
@@ -51,12 +52,12 @@
            a:visited {
                text-decoration: none;
                color: black;
-            }
+           }
         </style>
     </head>
     <body>
     <section>
-        <img src="images/soup-window.jpeg" alt="Window" />
+        <img src="images/soup-window.jpeg" alt="Window" class="main-image" />
         <div class="links">
             <div class="link-wrapper">
                 <img src="images/instagram.png" alt="Instagram">
