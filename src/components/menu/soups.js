@@ -10,9 +10,12 @@ const Soups = () => {
             title
             id
             price
-            weight
+            size
+            description {
+              description
+            }
             photo {
-              fixed(width: 600) {
+              fixed(width: 220) {
                 width
                 height
                 src
@@ -31,15 +34,17 @@ const Soups = () => {
   const items = data.allContentfulMenuItem.edges;
   return (
     <div>
-      <p className="sample">SAMPLE MENU</p>
       <ul className="menu-items-grid">
         {items.map(({ node }) => {
           return (
             <li key={node.id} className="menu-item">
               <h3>{node.title}</h3>
-              <span>£{node.price}</span>
-              <span>{node.weight} г</span>
-              <img src={node.photo.fixed.src} alt="soup" />
+              <span>{node.description.description}.</span>
+              <span className="size">{node.size}</span>
+              <div className="price">
+                ₴<strong>{node.price}</strong>
+              </div>
+              {/*<img src={node.photo.fixed.src} alt="soup" />*/}
             </li>
           );
         })}

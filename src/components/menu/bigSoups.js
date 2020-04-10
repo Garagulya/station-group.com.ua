@@ -1,0 +1,58 @@
+import React from "react";
+import { graphql, useStaticQuery } from "gatsby";
+
+const BigSoups = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      allContentfulMenuItem(
+        filter: { category: { title: { eq: "Меню для большого обеда" } } }
+      ) {
+        edges {
+          node {
+            title
+            id
+            price
+            size
+            description {
+              description
+            }
+            photo {
+              fixed(width: 220) {
+                width
+                height
+                src
+                srcSet
+              }
+            }
+            category {
+              title
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  const items = data.allContentfulMenuItem.edges;
+  return (
+    <div>
+      <ul className="menu-items-grid">
+        {items.map(({ node }) => {
+          return (
+            <li key={node.id} className="menu-item">
+              <h3>{node.title}</h3>
+              <span>{node.description.description}.</span>
+              <span className="size">{node.size}</span>
+              <div className="price">
+                ₴<strong>{node.price}</strong>
+              </div>
+              {/*<img src={node.photo.fixed.src} alt="soup" />*/}
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  );
+};
+
+export default BigSoups;
