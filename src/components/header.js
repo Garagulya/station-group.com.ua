@@ -1,10 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Logo from "../images/logo";
 
 const Header = ({ siteTitle }) => (
   <header>
     <span>{siteTitle}</span>
-    <img src="../images/logo.png" alt='logo' />
+    <Logo />
   </header>
 );
 
