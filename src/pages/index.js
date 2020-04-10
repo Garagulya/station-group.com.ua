@@ -14,39 +14,40 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Home" />
-      <section className="hero">
+      <section className="mainPic">
         <MainPic />
       </section>
       <section className="container">
-        <span className="description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </span>
+        <h2 className="description">СУП - ЕДА</h2>
+        {/*<span className="description">*/}
+        {/*  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do*/}
+        {/*  eiusmod tempor incididunt ut labore et dolore magna aliqua.*/}
+        {/*</span>*/}
         <div className="gallery-grid">
           <Img
-            fluid={data.latte.childImageSharp.fluid}
+            fluid={data.logo.childImageSharp.fluid}
             className="gallery-img1"
           />
           <Img
-            fluid={data.coffeeBags.childImageSharp.fluid}
+            fluid={data.team.childImageSharp.fluid}
             className="gallery-img2"
           />
           <Img
-            fluid={data.coffeePortrait.childImageSharp.fluid}
+            fluid={data.interior.childImageSharp.fluid}
             className="gallery-img3"
           />
         </div>
         <div className="about-grid">
-          <h2>WE'RE CRAZY ABOUT COFFEE</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </p>
+        {/*  <h2>СУП - ЕДА</h2>*/}
+        {/*  <p>*/}
+        {/*    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do*/}
+        {/*    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim*/}
+        {/*    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut*/}
+        {/*    aliquip ex ea commodo consequat. Duis aute irure dolor in*/}
+        {/*    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla*/}
+        {/*    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in*/}
+        {/*    culpa qui officia deserunt mollit anim id est laborum.*/}
+        {/*  </p>*/}
         </div>
       </section>
       {/*<div className="parallax"></div>*/}
@@ -56,9 +57,9 @@ const IndexPage = ({ data }) => {
       </section>
       {typeof window !== "undefined" && (
         <LeafletMap
-          position={[55.952103, -3.196175]} // Your Coordinates
+          position={[46.483343, 30.74877]} // Your Coordinates
           zoom={18} // Zoom Level
-          markerText={"Local Cafe, 65 Park Row"} // Icon text
+          markerText="ул. Канатная, 6, Одесса" // Icon text
         />
       )}
       <Footer />
@@ -75,19 +76,18 @@ export const fluidImage = graphql`
     }
   }
 `;
-
+// coffeeShop: file(relativePath: { eq: "coffee-shop-exterior.jpg" }) {
+//   ...fluidImage
+// }
 export const pageQuery = graphql`
   query {
-    coffeeShop: file(relativePath: { eq: "coffee-shop-exterior.jpg" }) {
+    interior: file(relativePath: { eq: "interior.jpeg" }) {
       ...fluidImage
     }
-    coffeePortrait: file(relativePath: { eq: "coffee-portrait.jpg" }) {
+    logo: file(relativePath: { eq: "logo.png" }) {
       ...fluidImage
     }
-    latte: file(relativePath: { eq: "latte.jpg" }) {
-      ...fluidImage
-    }
-    coffeeBags: file(relativePath: { eq: "coffee-bags.jpg" }) {
+    team: file(relativePath: { eq: "team.jpeg" }) {
       ...fluidImage
     }
   }

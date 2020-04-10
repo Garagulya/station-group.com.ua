@@ -1,31 +1,33 @@
-import React from 'react'
+import React from "react";
 
 const Footer = () => {
-
   return (
     <footer>
       <section>
         <div className="address">
-          <h3>WHERE ARE WE?</h3>
-          <span>65 Park Row</span>
-          <span>Edinburgh, EH1 4PE</span>
+          <h3>ГДЕ МЫ?</h3>
+          <span>ул. Канатная, 6</span>
+          <span>Одесса</span>
         </div>
         <div className="hours">
-          <h3>HOURS</h3>
-          <span>Weekdays / 8-5</span>
-          <span>Weekdays / 10-5</span>
+          <h3>ЧАСЫ РАБОТЫ</h3>
+          <span>Понедельник - Суббота</span>
+          <span>11:00 - 19:00</span>
         </div>
         <div className="contact">
-          <h3>CONTACT</h3>
-          <span>01632 960966</span>
-          <span>@yourSocialName</span>
+          <h3>КОНТАКТЫ</h3>
+          <span>066 513 1461</span>
+          <a
+            href="https://www.instagram.com/soup.station.factory/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            @soup.station.factory
+          </a>
         </div>
       </section>
-      <p>Built by
-        <a href="https://crollacreations.com" target="_blank" rel="noopener noreferrer">crollacreations</a>
-      </p>
     </footer>
-  )
-}
+  );
+};
 
 export default Footer;
