@@ -12,18 +12,20 @@ const Footer = () => {
         <div className="hours">
           <h3>ЧАСЫ РАБОТЫ</h3>
           <span>Понедельник - Суббота</span>
-          <span>11:00 - 19:00</span>
+          <span>12:00 - 18:00</span>
         </div>
+
         <div className="contact">
-          <h3>КОНТАКТЫ</h3>
-          <span>066 513 1461</span>
+          <h3>ДОСТАВКА</h3>
           <a
-            href="https://www.instagram.com/soup.station.factory/"
+            href="https://t.me/SupstanciyaBot"
             target="_blank"
             rel="noopener noreferrer"
           >
-            @soup.station.factory
+            Telegram-bot
           </a>
+          или
+          <span>066 513 1461</span>
         </div>
       </section>
     </footer>

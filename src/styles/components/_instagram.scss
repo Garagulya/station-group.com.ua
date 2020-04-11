@@ -4,8 +4,13 @@
   h2 {
     margin-bottom: 0;
   }
-  span {
-
+  a {
+    color: #000;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  a:hover {
+    color: $mint;
   }
   .insta-posts {
     list-style-type: none;
@@ -21,7 +26,7 @@
       grid-template-columns: repeat(3, 280px);
       grid-template-rows: repeat(2, 280px);
     }
-    
+
     li:nth-child(4) {
       display: none;
       @media screen and (min-width: 630px) {
@@ -79,7 +84,7 @@
     }
 
     .insta-post:hover .overlay {
-      opacity: 0.8  ;
+      opacity: 0.8;
     }
   }
 }
