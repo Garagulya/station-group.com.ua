@@ -18,13 +18,24 @@ const Menu = () => {
     <section className="menu">
       <h2>НАШЕ МЕНЮ</h2>
       <ul className="menu-headers">
-        <li className="menu-header" onClick={() => setMenuCategory("snacks")}>
+        <li
+          className={`menu-header${menuCategory === "snacks" ? " active" : ""}`}
+          onClick={() => setMenuCategory("snacks")}
+        >
           Закуски
         </li>
-        <li className="menu-header" onClick={() => setMenuCategory("soups")}>
+        <li
+          className={`menu-header${menuCategory === "soups" ? " active" : ""}`}
+          onClick={() => setMenuCategory("soups")}
+        >
           Супы
         </li>
-        <li className="menu-header" onClick={() => setMenuCategory("bigSoups")}>
+        <li
+          className={`menu-header${
+            menuCategory === "bigSoups" ? " active" : ""
+          }`}
+          onClick={() => setMenuCategory("bigSoups")}
+        >
           Меню для большого обеда
         </li>
       </ul>

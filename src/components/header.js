@@ -4,7 +4,7 @@ import Logo from "../images/logo";
 
 const Header = ({ siteTitle }) => (
   <header>
-    <span>{siteTitle}</span>
+    <span/>
     <Logo />
   </header>
 );
