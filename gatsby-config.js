@@ -6,8 +6,8 @@ if (process.env.NODE_ENV !== "production") {
 
 module.exports = {
   siteMetadata: {
-    title: ` `,
-    description: `  `,
+    title: `Супстанция`,
+    description: `Ресторан супа в Одессе. Суп - еда!`,
     author: ` `
   },
   plugins: [
@@ -27,7 +27,7 @@ module.exports = {
         name: `gatsby-starter-default`,
         short_name: `soup.station`,
         start_url: `/`,
-        background_color: `whiteP`,
+        background_color: `white`,
         theme_color: `white`,
         display: `minimal-ui`,
         icon: `src/images/logo.png` // This path is relative to the root of the site.
