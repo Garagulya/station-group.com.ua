@@ -25,7 +25,7 @@ const Footer = () => {
             Telegram-bot
           </a>
           или
-          <span>066 513 1461</span>
+          <a href="tel:066-513-1461">066 513 1461</a>
         </div>
       </section>
     </footer>
