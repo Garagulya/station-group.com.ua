@@ -40,13 +40,15 @@ const BigSoups = () => {
         {items.map(({ node }) => {
           return (
             <li key={node.id} className="menu-item">
-              <h3>{node.title}</h3>
-              <span>{node.description.description}.</span>
-              <span className="size">{node.size}</span>
+              <div>
+                <h3>{node.title}</h3>
+                <span>{node.description.description}.</span>
+                <span className="size">{node.size}</span>
+              </div>
+              {/*<img src={node.photo.fixed.src} alt="soup" />*/}
               <div className="price">
                 ₴<strong>{node.price}</strong>
               </div>
-              {/*<img src={node.photo.fixed.src} alt="soup" />*/}
             </li>
           );
         })}

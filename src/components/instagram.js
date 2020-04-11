@@ -31,7 +31,13 @@ const Instagram = () => {
   return (
     <div className="insta">
       <h2>INSTAGRAM</h2>
-      <span>@soup.station.factory</span>
+      <a
+        href="https://www.instagram.com/soup.station.factory"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        @soup.station.factory
+      </a>
       <ul className="insta-posts">
         {instaPosts.map(({ node }) => {
           return (

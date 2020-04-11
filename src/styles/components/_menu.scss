@@ -42,9 +42,14 @@
     .menu-item {
       padding-top: 15px;
       text-align: justify;
+      display: flex;
+
+      &:nth-child(even) {
+        padding-left: 29px;
+      }
 
       &:nth-child(odd) {
-        padding-right: 25px;
+        padding-right: 29px; // 29, а не 30, чтобы влезло слово "свежеиспечённой"))
       }
 
       h3 {
@@ -58,11 +63,9 @@
       }
 
       .price {
-        //font-weight: 600;
+        margin-left: 20px;
+        font-size: 24px;
       }
     }
-    //.menu-item:nth-child(odd) {
-    //  padding-right: 25px;
-    //}
   }
 }
